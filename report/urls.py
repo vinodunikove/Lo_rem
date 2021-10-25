@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import index
+from .import views
 
 urlpatterns=[
-    path('',index)
+    path('create/field-report',views.DailyFieldReportsAPI.as_view(),name='create-report'),
+    path('index',views.index)
 ]
