@@ -24,13 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9j%h@1c0_lc2(&)b)ln$nt@_-3d_9o^%etnan(y$9q0(v1gjk3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG =True
+DEBUG =False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['3.6.238.112']
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -82,16 +80,16 @@ WSGI_APPLICATION = 'lorempro.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+
 #
-
-
 DATABASES = {
     'default': {
     'ENGINE': 'django.db.backends.mysql',
     'NAME': 'loremDbServerDev',
     'USER': 'admin',
     'PASSWORD':'$Unikove$Lorem$2022',
-    'HOST': 'lorem.c4zsubk2n9l5.ap-south-1.rds.amazonaws.com',
+    'HOST':'3.6.238.112',
     'OPTIONS': {
     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
     }

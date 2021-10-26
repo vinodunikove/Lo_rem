@@ -5,3 +5,5 @@ class  DailyFieldReportsSerializer(serializers.ModelSerializer):
     class Meta:
         model= DailyFieldReports
         fields='__all__'
+
+

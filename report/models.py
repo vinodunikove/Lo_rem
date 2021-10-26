@@ -2,6 +2,22 @@ from django.db import models
 
 # Create your models here.
 
+class MachineMaster(models.Model):
+    machine_name=models.CharField(max_length=128,blank=True,null=True)
+    country_id=models.IntegerField(blank=True,null=True)
+    machine_type_id=models.IntegerField(blank=True,null=True)
+    customer_id=models.IntegerField(blank=True,null=True)
+    is_active=models.IntegerField(blank=True,null=True)
+    created_by=models.IntegerField(blank=True,null=True)
+    created_dttm=models.DateTimeField(blank=True,null=True)
+    modified_by=models.DateTimeField(blank=True,null=True)
+    modified_dttm=models.DateTimeField(blank=True,null=True)
+
+    def __str__(self):
+        return self.machine_name
+
+
+
 
 class DailyFieldReports(models.Model):
     machine_id=models.IntegerField(blank=True,null=True)
@@ -25,7 +41,7 @@ class DailyFieldReports(models.Model):
     created_dttm=models.DateTimeField(blank=True,null=True)
     modified_by=models.IntegerField(blank=True,null=True)
     modified_dttm=models.DateTimeField(blank=True,null=True)
-
+    dailyFieldReports_machineid_idx=models.ForeignKey(MachineMaster,on_delete=models.CASCADE)
 
 
 
