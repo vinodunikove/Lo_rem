@@ -89,7 +89,7 @@ DATABASES = {
     'NAME': 'loremDbServerDev',
     'USER': 'admin',
     'PASSWORD':'$Unikove$Lorem$2022',
-    'HOST':'3.6.238.112',
+    'HOST':'lorem.c4zsubk2n9l5.ap-south-1.rds.amazonaws.com',
     'OPTIONS': {
     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
     }
